@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+
+	"name": "Vultr Deployer",
+
+	"version": "1.0",
+
+	"content_scripts": [
+		{
+			"matches": [ "*://my.vultr.com/deploy/"],
+			"js": [ "deploy.js" ]
+    	}
+    ],
+
+	"browser_action": {
+    	"default_title": "Vultr Deployer"
+	},
+
+	"background": {
+    	"scripts": ["background.js"],
+    	"persistent": false
+	},
+
+    "permissions": [
+		"storage",
+		"tabs"
+	]
+}
